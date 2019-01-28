@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>去死吧996</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on 去死吧996</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zn-cn</language>
+    <lastBuildDate>Sun, 20 Aug 2017 21:38:52 +0800</lastBuildDate>
+    
+        <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>观点</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Sun, 20 Aug 2017 21:38:52 +0800</pubDate>
+      
+      <guid>http://localhost:1313/about/</guid>
+      
+        <description>&lt;p&gt;网友观点列表&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/my-first-post/</link>
+      <pubDate>Mon, 28 Jan 2019 13:46:43 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/my-first-post/</guid>
+      
+        <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/godie996.png&#34; alt=&#34;godie996.png&#34; /&gt;&lt;/p&gt;
+</description>
+      
+    </item>
+    
+  </channel>
+</rss>
