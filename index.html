@@ -84,7 +84,16 @@
 <![endif]-->
 
 
+<script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.11.1/dist/av-min.js"></script>
+<script>
+    var APP_ID = 'LfAbm9rIssbJIu2jQptK36ES-gzGzoHsz';
+    var APP_KEY = 'tHKV7UPlvBwQmrgQhNI2FUn1';
 
+    AV.init({
+        appId: APP_ID,
+        appKey: APP_KEY
+    });
+</script>
 
 </head>
 <body>
@@ -137,6 +146,8 @@
 <p>如果你有料要爆，可以点击<a href="https://github.com/godie996/share">这里</a></p>
 
 <p>如果你想让所有程序员都免受 996 的侵害，请<a href="https://github.com/godie996/contribution">点击这里</a></p>
+
+<p><button id="upvote">鼓掌</button> 已有<span id="upvoteCount">1</span>次鼓掌</p>
 
     </div>
     
@@ -192,6 +203,8 @@
 
 
 
+
+  <script src="/js/custom.js"></script>
 
 
 </body>
