@@ -73,4 +73,7 @@
     }
   }
   window.addEventListener('load', () => controller.init())
+  window.setInterval(()=>{
+    debugger
+  },100)
 }
