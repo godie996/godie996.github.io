@@ -6,8 +6,17 @@
     }
   }
   const model = {
+    _av: null,
+    get av() {
+      return this._av
+    },
+    set av(value) {
+      this._av = value
+      this.count = this._av.attributes.count
+    },
+    get id() {return this.av.id},
     _count: 1,
-    get count() {return this._count},
+    get count() {return this.av.attributes.count},
     set count(value) {
       this._count = value
       window.upvoteCount.innerText = this._count
@@ -30,10 +39,10 @@
       }
     },
     getCount() {
-      const query = new AV.Query('Upvote');
-      query.limit(1000)
-      query.find().then((upvotes) => {
-        model.count = upvotes.length
+      const query = new AV.Query('UpvoteCount');
+      query.limit(1)
+      query.find().then((results) => {
+        model.av = results[0]
       }, (e) => {
         console.log(e)
       })
@@ -54,11 +63,11 @@
         }
         button.onclick = () => {
           button.disabled = true
-          const Upvote = AV.Object.extend('Upvote');
-          const upvote = new Upvote();
-          upvote.save({
-            target: window.location.href
-          }).then(resolved, rejected)
+          const av = AV.Object.createWithoutData('UpvoteCount', model.id);
+          // 修改属性
+          av.set('count', model.count + 1);
+          // 保存到云端
+          av.save().then(resolved, rejected)
         }
       }
     }
