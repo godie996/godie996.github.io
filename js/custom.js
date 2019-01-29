@@ -13,6 +13,7 @@
   const controller = () => {
     const button = document.querySelector('#upvote')
     const query = new AV.Query('Upvote');
+    query.limit(1000)
     query.find().then((upvotes) => {
       model.count = upvotes.length
     }, (e) => {
@@ -37,6 +38,16 @@
         }).then(resolved, rejected)
       }
     }
+
+    var config = {
+      apiKey: "AIzaSyB30FyEhU0NdQsn6WiVaZiOadfDGbHNq7U",
+      authDomain: "godie996-74232.firebaseapp.com",
+      databaseURL: "https://godie996-74232.firebaseio.com",
+      projectId: "godie996-74232",
+      storageBucket: "godie996-74232.appspot.com",
+      messagingSenderId: "54493442820"
+    };
+    firebase.initializeApp(config);
 
   }
   window.addEventListener('load', controller)
